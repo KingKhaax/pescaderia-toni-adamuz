@@ -169,3 +169,5 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
   .banco use:nth-child(4) { animation-delay: 0.3s; } .banco use:nth-child(5) { animation-delay: 0.4s; }
   .banco use:nth-child(6) { animation-delay: 0.5s; }
 }
+.lugar a, address a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); transition: text-decoration-color 0.25s var(--ease); }
+.lugar a:hover, address a:hover { text-decoration-color: currentColor; }
