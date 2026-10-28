@@ -123,10 +123,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .donde address b { font-family: var(--titulo); font-weight: 400; display: block; font-size: 1.6rem; }
 .donde .boton { margin-top: 1.75rem; display: inline-flex; padding-inline: 1.75rem; background: var(--almagre); }
 .donde .boton:hover { background: var(--almagre-hondo); }
-.puestos { display: flex; gap: clamp(0.75rem, 3vw, 1.5rem); justify-content: center; }
-.puesto { flex: 1; max-width: 14rem; background: var(--almagre); color: var(--cal); border-radius: 50% 50% 0 0 / 4.5rem 4.5rem 0 0; padding: 5rem 1rem 1.75rem; text-align: center; border-bottom: 0.6rem solid var(--tinta); }
-.puesto span { display: block; font-size: 0.95rem; font-weight: 700; }
-.puesto b { display: block; font: 400 clamp(3rem, 11vw, 4.75rem)/1 var(--titulo); margin-top: 0.15rem; }
+.tarjeta { display: block; width: 100%; max-width: 36rem; height: auto; justify-self: center; border-radius: 0.9rem; box-shadow: 0 0.6rem 1.6rem rgb(42 20 16 / 0.28); }
 
 /* Pie */
 .pie { background: var(--tinta); color: var(--cal); padding: 3rem var(--lado); }
