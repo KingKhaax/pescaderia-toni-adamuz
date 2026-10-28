@@ -111,7 +111,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 /* Pescados: soportal de cuatro arcos */
 .pescados .intro { margin-top: 1rem; color: var(--cal-suave); }
 .soportal { margin-top: 3rem; display: grid; gap: 2.5rem; align-items: start; }
-.arco { background: var(--cal); color: var(--tinta); border-radius: var(--arco); padding: 3rem clamp(1.25rem, 3vw, 2.25rem) 2.25rem; --ojo: var(--cal); }
+.arco { background: var(--cal); color: var(--tinta); border-radius: var(--arco); padding: 2.6rem clamp(1.25rem, 3vw, 2.25rem) 2.25rem; --ojo: var(--cal); }
 .arco.hielo { background: var(--hielo); --ojo: var(--hielo); }
 .arco h3 { font-size: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
 .arco .tipo { margin: 0.5rem auto 1.5rem; text-align: center; font-size: 1rem; }
@@ -138,13 +138,9 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 @media (min-width: 56rem) {
   .portada .interior { grid-template-columns: 1.15fr 0.85fr; }
   .horario .interior { grid-template-columns: 1fr 1fr; align-items: start; }
-  .soportal { grid-template-columns: 1fr 1fr; }
+  .soportal { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
   .donde .interior { grid-template-columns: 1fr 1fr; }
   .pie .interior { grid-template-columns: 1fr auto; align-items: end; }
-}
-
-@media (min-width: 76rem) {
-  .soportal { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 }
 
 /* Un único momento: los arcos se levantan al cargar */
@@ -175,3 +171,5 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 /* Ola entre el catálogo y la plaza, como en la tarjeta */
 .pescados { position: relative; padding-bottom: calc(clamp(3.5rem, 9vw, 7rem) + 4rem); }
 .ola { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 5.5rem; display: block; }
+
+.arco .logo { display: block; height: 8rem; width: auto; max-width: 100%; margin: 0 auto 1.1rem; object-fit: contain; }
