@@ -146,7 +146,6 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .banco { display: block; width: 100%; max-width: 40rem; height: auto; margin-top: 2.5rem; color: var(--rojo-hondo); --ojo: var(--rojo); }
 .banco .lider { color: var(--cal); --ojo: var(--rojo); }
 .cabeza-pescados { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; }
-.cabeza-pescados svg { width: clamp(7rem, 20vw, 13rem); height: auto; color: var(--cal); --ojo: var(--rojo); flex: none; }
 @media (prefers-reduced-motion: no-preference) {
   @keyframes nadar { from { transform: translateX(-3rem); opacity: 0; } to { transform: none; opacity: 1; } }
   .banco use { animation: nadar 1.4s var(--ease) backwards; }
