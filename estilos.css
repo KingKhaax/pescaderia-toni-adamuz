@@ -176,3 +176,15 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 @media (max-width: 40rem) { .herr .cab { top: 22%; } }
 @media (max-width: 40rem) { .cabecera { padding-block: .5rem; } .cabecera nav a { padding: .5rem 0; } }
 .guardar { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-weight: 700; font-size: 1rem; color: var(--azul-h); }
+
+/* Aviso legal */
+.legal .interior { max-width: 46rem; }
+.legal h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin-bottom: 2rem; }
+.legal h2 { font-size: 1.35rem; margin: 2.25rem 0 .75rem; }
+.legal p { margin-top: .75rem; }
+.legal .datos { margin: 0; border-top: 2px solid var(--tinta); }
+.legal .datos div { display: grid; grid-template-columns: 11rem 1fr; gap: .25rem 1rem; padding: .8rem 0; border-bottom: 1px solid color-mix(in srgb, var(--tinta) 25%, transparent); }
+.legal dt { font-weight: 700; }
+.legal dd { margin: 0; overflow-wrap: anywhere; }
+.legal .fecha { margin-top: 2.5rem; font-size: .95rem; }
+@media (max-width: 40rem) { .legal .datos div { grid-template-columns: 1fr; } }
