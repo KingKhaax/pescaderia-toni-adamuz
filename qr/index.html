@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cartel con QR · Pescadería Toñi Adamuz</title>
+<style>
+@font-face { font-family: "Alfa Slab One"; src: url("../fuentes/alfa-slab-one.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("../fuentes/atkinson-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("../fuentes/atkinson-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+:root { --rojo: #d8262f; --tinta: #14205c; --cal: #f9fafc; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e1e7f1; color: var(--tinta); font: 400 1.1rem/1.5 "Atkinson Hyperlegible", system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.barra { max-width: 40rem; margin: 0 auto; padding: 1rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.barra button { font: 700 1.05rem "Atkinson Hyperlegible", system-ui, sans-serif; min-height: 3rem; padding: .6rem 1.4rem; border: 0; border-radius: .7rem; background: var(--tinta); color: var(--cal); cursor: pointer; }
+.hoja { width: 100%; max-width: 40rem; margin: 0 auto 2rem; background: var(--cal); display: grid; justify-items: center; text-align: center; }
+.cab { width: 100%; background: var(--rojo); color: var(--cal); padding: 2.2rem 1.5rem 2.6rem; }
+h1 { margin: 0; font: 400 clamp(2rem, 8vw, 3.4rem)/1.05 "Alfa Slab One", Georgia, serif; }
+.cab p { margin: .8rem 0 0; font-weight: 700; }
+.qr { width: min(78%, 22rem); height: auto; margin: 2rem 0 1rem; image-rendering: crisp-edges; }
+.pide { margin: 0; font: 400 1.7rem/1.15 "Alfa Slab One", Georgia, serif; padding-inline: 1.5rem; }
+.tel { margin: 1.1rem 0 0; font: 400 1.5rem/1.3 "Alfa Slab One", Georgia, serif; }
+.pie { margin: 1.4rem 0 2rem; padding-inline: 1.5rem; }
+@page { size: A4; margin: 0; }
+@media print { body { background: var(--cal); } .barra { display: none; } .hoja { max-width: none; margin: 0; min-height: 100vh; align-content: start; } .qr { width: 15cm; } }
+</style>
+</head>
+<body>
+<div class="barra"><span>Cartel listo para imprimir en A4.</span><button type="button" onclick="window.print()">Imprimir</button></div>
+<main class="hoja">
+  <div class="cab">
+    <h1>Pescadería Toñi Adamuz</h1>
+    <p>Mercado Sánchez Peña, puestos 35 y 36 · Plaza de la Corredera</p>
+  </div>
+  <img class="qr" src="qr.svg" alt="Código QR que lleva a la web de la pescadería" width="400" height="400">
+  <p class="pide">Escanea y pide por teléfono o WhatsApp</p>
+  <p class="tel">661 512 393 Toñi<br>661 512 392 Paco</p>
+  <p class="pie">Reparto a domicilio de martes a viernes · Pedido mínimo 50 €</p>
+</main>
+</body>
+</html>

@@ -175,3 +175,4 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .lst li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent); }
 @media (max-width: 40rem) { .herr .cab { top: 22%; } }
 @media (max-width: 40rem) { .cabecera { padding-block: .5rem; } .cabecera nav a { padding: .5rem 0; } }
+.guardar { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-weight: 700; font-size: 1rem; color: var(--azul-h); }
