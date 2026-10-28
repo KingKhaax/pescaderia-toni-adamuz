@@ -168,4 +168,4 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 }
 .lugar a, address a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); transition: text-decoration-color 0.25s var(--ease); }
 .lugar a:hover, address a:hover { text-decoration-color: currentColor; }
-.numero .nombre { font: 700 1.15rem/1 var(--texto); color: var(--almagre); }
+.numero .nombre { font: inherit; color: inherit; }
