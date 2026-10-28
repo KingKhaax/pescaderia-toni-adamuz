@@ -3,21 +3,23 @@
 @font-face { font-family: "Atkinson Hyperlegible"; src: url("fuentes/atkinson-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
 :root {
-  --almagre: #9e3b26;
-  --almagre-hondo: #7f2d1b;
-  --cal: #f7f0e4;
-  --cal-sombra: #eadfcc;
-  --tinta: #2a1410;
-  --hielo: #dde8e6;
+  --rojo: #d8262f;
+  --rojo-hondo: #a91b23;
+  --azul: #2f7fd9;
+  --azul-hondo: #1f5fb0;
+  --cal: #f9fafc;
+  --cal-sombra: #e1e7f1;
+  --tinta: #14205c;
+  --hielo: #cfe8fa;
   --whatsapp: #15753a;
-  --cal-suave: color-mix(in srgb, var(--cal) 86%, var(--almagre));
+  --cal-suave: color-mix(in srgb, var(--cal) 94%, var(--rojo));
   --titulo: "Alfa Slab One", Georgia, serif;
   --texto: "Atkinson Hyperlegible", system-ui, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --arco: 50% 50% 0 0 / 5.5rem 5.5rem 0 0;
   --lado: clamp(1.25rem, 5vw, 4rem);
   color-scheme: light;
-  scrollbar-color: var(--almagre) var(--cal-sombra);
+  scrollbar-color: var(--rojo) var(--cal-sombra);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -30,7 +32,7 @@ body {
 }
 ::selection { background: var(--tinta); color: var(--cal); }
 :focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
-.sobre-almagre :focus-visible { outline-color: var(--cal); }
+.sobre-rojo :focus-visible { outline-color: var(--cal); }
 a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 2px; }
 h1, h2, h3 { font-family: var(--titulo); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
 p { margin: 0; max-width: 65ch; text-wrap: pretty; }
@@ -38,7 +40,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-.sobre-almagre { background: var(--almagre); color: var(--cal); }
+.sobre-rojo { background: var(--rojo); color: var(--cal); }
 .seccion { padding: clamp(3.5rem, 9vw, 7rem) var(--lado); }
 .interior { max-width: 74rem; margin-inline: auto; }
 
@@ -65,7 +67,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .contacto h2 { font-size: 1.6rem; text-align: center; }
 .estado { margin: 0.75rem auto 1.5rem; text-align: center; font-weight: 700; min-height: 1.55em; }
 .estado:empty { display: none; }
-.estado::before { content: ""; display: inline-block; width: 0.7em; height: 0.7em; border-radius: 50%; margin-right: 0.5em; background: var(--almagre); box-shadow: 0 0 0 2px var(--cal), 0 0 0 4px var(--almagre); }
+.estado::before { content: ""; display: inline-block; width: 0.7em; height: 0.7em; border-radius: 50%; margin-right: 0.5em; background: var(--rojo); box-shadow: 0 0 0 2px var(--cal), 0 0 0 4px var(--rojo); }
 .estado[data-abierto="si"]::before { background: var(--whatsapp); box-shadow: 0 0 0 2px var(--cal), 0 0 0 4px var(--whatsapp); }
 .linea { padding-block: 1.1rem; border-top: 2px solid var(--cal-sombra); }
 .linea:first-of-type { border-top: 0; }
@@ -79,7 +81,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
   transition: transform 0.25s var(--ease), background-color 0.25s var(--ease);
 }
 .boton.wa { background: var(--whatsapp); }
-.boton:hover { transform: translateY(-2px); background: var(--almagre-hondo); }
+.boton:hover { transform: translateY(-2px); background: var(--rojo-hondo); }
 .boton.wa:hover { background: #0f5e2d; }
 .boton:active { transform: translateY(0); }
 
@@ -101,8 +103,8 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .semana th { font-weight: 700; font-size: 0.95rem; padding: 0.35rem 0; text-align: center; }
 .semana th[scope="row"] { text-align: left; width: 6.5rem; font-size: 0.95rem; line-height: 1.25; padding-right: 0.5rem; }
 .semana th[scope="row"] small { display: block; font-weight: 400; font-size: 0.9rem; }
-.semana tbody td { height: 3.1rem; border-radius: 0.5rem 0.5rem 0 0; border: 2px solid var(--almagre); text-align: center; }
-.semana td.si { background: var(--almagre); }
+.semana tbody td { height: 3.1rem; border-radius: 0.5rem 0.5rem 0 0; border: 2px solid var(--azul); text-align: center; }
+.semana td.si { background: var(--azul); }
 .semana td.no { border-style: dashed; border-color: color-mix(in srgb, var(--tinta) 35%, var(--cal)); border-radius: 0.25rem; }
 .semana th.hoy { background: var(--tinta); color: var(--cal); border-radius: 0.4rem; }
 
@@ -121,9 +123,9 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .donde .interior { display: grid; gap: 3rem; align-items: center; }
 .donde address { font-style: normal; margin-top: 1.5rem; font-size: 1.4rem; line-height: 1.35; }
 .donde address b { font-family: var(--titulo); font-weight: 400; display: block; font-size: 1.6rem; }
-.donde .boton { margin-top: 1.75rem; display: inline-flex; padding-inline: 1.75rem; background: var(--almagre); }
-.donde .boton:hover { background: var(--almagre-hondo); }
-.tarjeta { display: block; width: 100%; max-width: 36rem; height: auto; justify-self: center; border-radius: 0.9rem; box-shadow: 0 0.6rem 1.6rem rgb(42 20 16 / 0.28); }
+.donde .boton { margin-top: 1.75rem; color: var(--cal); display: inline-flex; padding-inline: 1.75rem; background: var(--rojo); }
+.donde .boton:hover { background: var(--rojo-hondo); }
+.tarjeta { display: block; width: 100%; max-width: 36rem; height: auto; justify-self: center; border-radius: 0.9rem; box-shadow: 0 0.6rem 1.6rem rgb(20 32 92 / 0.32); }
 
 /* Pie */
 .pie { background: var(--tinta); color: var(--cal); padding: 3rem var(--lado); }
@@ -152,13 +154,13 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 }
 
 /* Dibujos de peces: formas vectoriales planas; --ojo es el color de los detalles */
-.banco { display: block; width: 100%; max-width: 40rem; height: auto; margin-top: 2.5rem; color: var(--almagre-hondo); --ojo: var(--almagre); }
-.banco .lider { color: var(--cal); --ojo: var(--almagre); }
-.dibujo { display: flex; justify-content: center; align-items: center; gap: 0.75rem; height: 3.4rem; margin-bottom: 1rem; color: var(--almagre); }
+.banco { display: block; width: 100%; max-width: 40rem; height: auto; margin-top: 2.5rem; color: var(--rojo-hondo); --ojo: var(--rojo); }
+.banco .lider { color: var(--cal); --ojo: var(--rojo); }
+.dibujo { display: flex; justify-content: center; align-items: center; gap: 0.75rem; height: 3.4rem; margin-bottom: 1rem; color: var(--azul); }
 .dibujo svg { height: 100%; width: auto; }
-.hielo .dibujo { color: #2f6f73; }
+.hielo .dibujo { color: var(--azul-hondo); }
 .cabeza-pescados { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; }
-.cabeza-pescados svg { width: clamp(7rem, 20vw, 13rem); height: auto; color: var(--cal); --ojo: var(--almagre); flex: none; }
+.cabeza-pescados svg { width: clamp(7rem, 20vw, 13rem); height: auto; color: var(--cal); --ojo: var(--rojo); flex: none; }
 @media (prefers-reduced-motion: no-preference) {
   @keyframes nadar { from { transform: translateX(-3rem); opacity: 0; } to { transform: none; opacity: 1; } }
   .banco use { animation: nadar 1.4s var(--ease) backwards; }
@@ -169,3 +171,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .lugar a, address a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); transition: text-decoration-color 0.25s var(--ease); }
 .lugar a:hover, address a:hover { text-decoration-color: currentColor; }
 .numero .nombre { font: inherit; color: inherit; }
+
+/* Ola entre el catálogo y la plaza, como en la tarjeta */
+.pescados { position: relative; padding-bottom: calc(clamp(3.5rem, 9vw, 7rem) + 4rem); }
+.ola { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 5.5rem; display: block; }
