@@ -1,6 +1,7 @@
 ﻿# Pescadería Toñi Adamuz
 
 Web informativa (sin pedidos): contacto por llamada y WhatsApp, horarios, reparto, catálogo y ubicación.
+**Ver la web:** https://kingkhaax.github.io/pescaderia-toni-adamuz/
 
 - Abrir `index.html` en el navegador; no necesita instalación.
 - Productos: editar la sección `#pescados` de `index.html`. Fotos: añadirlas en `fotos/` y ponerlas con `<img>` dentro de cada `<li>`.
