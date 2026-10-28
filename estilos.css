@@ -69,7 +69,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .estado[data-abierto="si"]::before { background: var(--whatsapp); box-shadow: 0 0 0 2px var(--cal), 0 0 0 4px var(--whatsapp); }
 .linea { padding-block: 1.1rem; border-top: 2px solid var(--cal-sombra); }
 .linea:first-of-type { border-top: 0; }
-.numero { display: block; font: 400 clamp(1.75rem, 6vw, 2.15rem)/1 var(--titulo); font-variant-numeric: tabular-nums; margin-bottom: 0.9rem; }
+.numero { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 0.75rem; max-width: none; font: 400 clamp(1.75rem, 6vw, 2.15rem)/1 var(--titulo); font-variant-numeric: tabular-nums; margin-bottom: 0.9rem; }
 .acciones { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
 .boton {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
@@ -168,3 +168,4 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 }
 .lugar a, address a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); transition: text-decoration-color 0.25s var(--ease); }
 .lugar a:hover, address a:hover { text-decoration-color: currentColor; }
+.numero .nombre { font: 700 1.15rem/1 var(--texto); color: var(--almagre); }
