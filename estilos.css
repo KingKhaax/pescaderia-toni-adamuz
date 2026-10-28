@@ -23,7 +23,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 6.5rem; }
 body {
   margin: 0;
   font: 400 1.125rem/1.55 var(--texto);
@@ -45,7 +45,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .interior { max-width: 74rem; margin-inline: auto; }
 
 /* Cabecera */
-.cabecera { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; align-items: center; justify-content: space-between; padding: 1.1rem var(--lado); }
+.cabecera { position: sticky; top: 0; z-index: 50; box-shadow: 0 .25rem .9rem rgb(20 32 92 / 0.28); display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; align-items: center; justify-content: space-between; padding: 1.1rem var(--lado); }
 .marca { font: 400 1.25rem/1 var(--titulo); text-decoration: none; }
 .cabecera nav { display: flex; gap: 0.25rem 1.5rem; }
 .cabecera nav a { padding: 0.6rem 0; }
@@ -175,3 +175,4 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .lst li { padding: .55rem 0; font-weight: 700; border-top: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent); }
 .lst li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent); }
 @media (max-width: 40rem) { .herr .cab { top: 22%; } }
+@media (max-width: 40rem) { .cabecera { padding-block: .5rem; } .cabecera nav a { padding: .5rem 0; } }
