@@ -179,8 +179,8 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 
 /* Aviso legal */
 .legal .interior { max-width: 46rem; }
-.legal h2 { font-size: clamp(2rem, 5.5vw, 3.2rem); margin-bottom: 2rem; }
-.legal h3 { font-size: 1.35rem; margin: 2.25rem 0 .75rem; }
+.legal h1 { font-size: clamp(2rem, 5.5vw, 3.2rem); margin-bottom: 2rem; }
+.legal h2, .legal h3 { font-size: 1.35rem; margin: 2.25rem 0 .5rem; }
 .legal p { margin-top: .75rem; }
 .legal .datos { margin: 0; border-top: 2px solid var(--tinta); }
 .legal .datos div { display: grid; grid-template-columns: 11rem 1fr; gap: .25rem 1rem; padding: .8rem 0; border-bottom: 1px solid color-mix(in srgb, var(--tinta) 25%, transparent); }
