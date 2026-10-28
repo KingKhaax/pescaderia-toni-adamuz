@@ -19,6 +19,7 @@ const estado = document.getElementById("estado");
 estado.textContent = texto;
 estado.dataset.abierto = abierto ? "si" : "no";
 
-// Columna del día de hoy en la tabla (L=1 … D=0 → posición 1…7).
-const cols = document.querySelectorAll("#semana thead th");
-cols[(dia + 6) % 7]?.classList.add("hoy");
+// Marca la fila de hoy en la lista de la semana (data-d usa getDay: domingo=0).
+const fila = document.querySelector(`#semana tr[data-d="${dia}"]`);
+fila?.classList.add("hoy");
+fila?.setAttribute("aria-current", "date");

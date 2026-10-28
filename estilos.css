@@ -97,16 +97,6 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .reglas li { padding: 1rem 0; border-top: 2px solid var(--tinta); }
 .reglas li:last-child { border-bottom: 2px solid var(--tinta); }
 .reglas b { display: block; font-family: var(--titulo); font-weight: 400; font-size: 1.2rem; margin-bottom: 0.15rem; }
-.semana { width: 100%; border-collapse: separate; border-spacing: 4px; table-layout: fixed; align-self: start; }
-.semana caption { text-align: left; padding-bottom: 0.75rem; font-weight: 700; }
-.semana thead td { border: 0; }
-.semana th { font-weight: 700; font-size: 0.95rem; padding: 0.35rem 0; text-align: center; }
-.semana th[scope="row"] { text-align: left; width: 6.5rem; font-size: 0.95rem; line-height: 1.25; padding-right: 0.5rem; }
-.semana th[scope="row"] small { display: block; font-weight: 400; font-size: 0.9rem; }
-.semana tbody td { height: 3.1rem; border-radius: 0.5rem 0.5rem 0 0; border: 2px solid var(--azul); text-align: center; }
-.semana td.si { background: var(--azul); }
-.semana td.no { border-style: dashed; border-color: color-mix(in srgb, var(--tinta) 35%, var(--cal)); border-radius: 0.25rem; }
-.semana th.hoy { background: var(--tinta); color: var(--cal); border-radius: 0.4rem; }
 
 /* Pescados: soportal de cuatro arcos */
 .pescados .intro { margin-top: 1rem; color: var(--cal-suave); }
@@ -175,7 +165,7 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .lst li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent); }
 @media (max-width: 40rem) { .herr .cab { top: 22%; } }
 @media (max-width: 40rem) { .cabecera { padding-block: .5rem; } .cabecera nav a { padding: .5rem 0; } }
-.guardar { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-weight: 700; font-size: 1rem; color: var(--azul-h); }
+.guardar { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-weight: 700; font-size: 1rem; color: var(--azul-hondo); }
 
 /* Aviso legal */
 .legal .interior { max-width: 46rem; }
@@ -188,3 +178,20 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .legal dd { margin: 0; overflow-wrap: anywhere; }
 .legal .fecha { margin-top: 2.5rem; font-size: .95rem; }
 @media (max-width: 40rem) { .legal .datos div { grid-template-columns: 1fr; } }
+
+/* Semana: lista día a día */
+.dias { width: 100%; border-collapse: separate; border-spacing: 0; align-self: start; }
+.dias caption { text-align: left; padding-bottom: .75rem; font-weight: 700; }
+.dias thead th { text-align: left; font-size: .95rem; padding: 0 .75rem .6rem; }
+.dias thead svg.i { width: 1.1em; height: 1.1em; vertical-align: -.2em; }
+.dias tbody th, .dias tbody td { padding: .55rem .75rem; border-top: 1px solid color-mix(in srgb, var(--tinta) 14%, transparent); }
+.dias tbody tr:first-child th, .dias tbody tr:first-child td { border-top: 0; }
+.dias tbody th { text-align: left; font: 400 1.1rem/1.2 var(--titulo); width: 38%; }
+.dias tr.hoy th, .dias tr.hoy td { background: var(--hielo); border-top-color: transparent; }
+.dias tr.hoy th { border-radius: .6rem 0 0 .6rem; }
+.dias tr.hoy td:last-child { border-radius: 0 .6rem .6rem 0; }
+.dias tr.hoy + tr th, .dias tr.hoy + tr td { border-top-color: transparent; }
+.chip { display: inline-flex; align-items: center; padding: .35rem .75rem; border-radius: 99px; background: var(--azul-hondo); color: var(--cal); font-weight: 700; font-size: .92rem; white-space: nowrap; }
+.chip.r { background: var(--rojo); }
+.chip.no { background: none; color: #5d6584; font-weight: 400; border: 1.5px dashed #a9afc6; }
+@media (max-width: 40rem) { .dias tbody th { font-size: 1rem; width: 36%; } .dias tbody th, .dias tbody td { padding-inline: .4rem; } .chip { padding: .3rem .55rem; font-size: .85rem; } }
