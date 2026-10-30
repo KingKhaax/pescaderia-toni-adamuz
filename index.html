@@ -27,6 +27,7 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-telefono" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+  <symbol id="i-pez" viewBox="0 0 120 60"><path fill="currentColor" d="M6 30C24 6 68 2 96 30C68 58 24 54 6 30ZM90 30L116 10Q108 30 116 50ZM20.8 26a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0-6.4 0Z"/><path d="M38 17Q31 30 38 43" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/></symbol>
   <symbol id="i-camion" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></g></symbol>
   <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
 </svg>
@@ -41,7 +42,10 @@
 </header>
 
 <main id="inicio">
-  <section class="sobre-rojo portada">
+  <section class="portada">
+    <div class="luz" aria-hidden="true"></div>
+    <svg class="pez-fondo p1" viewBox="0 0 120 60" aria-hidden="true"><use href="#i-pez"/></svg>
+    <svg class="pez-fondo p2" viewBox="0 0 120 60" aria-hidden="true"><use href="#i-pez"/></svg>
     <div class="interior">
       <div class="texto">
         <h1>Pescadería Toñi Adamuz</h1>
@@ -70,6 +74,7 @@
         </div>
       </div>
     </div>
+      <svg class="ola-portada" viewBox="0 0 1440 88" preserveAspectRatio="none" aria-hidden="true"><path fill="#2f7fd9" d="M0 40C180 -10 330 10 520 44s360 40 560 0 280-40 360-14V88H0z"/><path fill="#6fc9fb" d="M0 58C200 20 360 30 560 58s380 24 560-6 240-22 320-6V88H0z"/><path fill="#f9fafc" d="M0 74C220 48 380 56 600 76s400 6 560-12 180-10 280 2V88H0z"/></svg>
   </section>
 
   <section class="seccion horario" id="horario">

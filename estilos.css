@@ -50,19 +50,29 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .cabecera nav { display: flex; gap: 0.25rem 1.5rem; }
 .cabecera nav a { padding: 0.6rem 0; }
 
-/* Portada */
-.portada { padding: clamp(2rem, 6vw, 4.5rem) var(--lado) 0; }
-.portada .interior { display: grid; gap: 3rem; align-items: end; }
+/* Portada: mar de superficie a fondo, olas abajo */
+.portada { position: relative; overflow: hidden; isolation: isolate; color: var(--cal); background: linear-gradient(180deg, #3d8ee0 0%, var(--azul-hondo) 55%, var(--tinta) 100%); padding: clamp(2rem, 6vw, 4.5rem) var(--lado) clamp(6rem, 12vw, 8.5rem); }
+.portada .interior { position: relative; z-index: 2; display: grid; gap: 3rem; align-items: center; }
 .portada h1 { font-size: clamp(2.6rem, 9vw, 5.75rem); }
-.portada .lema { margin-top: 1.5rem; font-size: 1.3rem; color: var(--cal-suave); max-width: 32ch; }
+.portada .lema { margin-top: 1.5rem; font-size: 1.3rem; color: var(--cal); max-width: 32ch; }
 .portada .lugar { margin-top: 1.25rem; font-weight: 700; }
-.portada .texto { padding-bottom: clamp(0rem, 4vw, 4rem); }
+.portada :focus-visible { outline-color: var(--cal); }
+.portada .luz { position: absolute; inset: 0; z-index: 0; background: repeating-linear-gradient(100deg, transparent 0 90px, rgb(255 255 255 / 0.05) 90px 150px); }
+.pez-fondo { position: absolute; z-index: 1; width: 9.5rem; height: auto; color: rgb(255 255 255 / 0.2); pointer-events: none; }
+.pez-fondo.p1 { top: 7%; left: 42%; }
+.pez-fondo.p2 { bottom: 14%; left: 26%; width: 8rem; }
+.ola-portada { position: absolute; z-index: 1; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(3.5rem, 8vw, 6rem); display: block; }
+@media (max-width: 55.99rem) { .pez-fondo.p1 { left: auto; right: 4%; top: 2%; width: 6rem; } .pez-fondo.p2 { display: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes deriva { from { transform: translateX(-12px); } to { transform: translateX(12px); } }
+  .pez-fondo { animation: deriva 6s ease-in-out infinite alternate; }
+}
 
-/* Panel de contacto en arco */
+/* Panel de contacto */
 .contacto {
   background: var(--cal); color: var(--tinta);
-  border-radius: var(--arco);
-  padding: 6.5rem clamp(1.25rem, 4vw, 2.5rem) 2.25rem;
+  border-radius: 1.4rem; box-shadow: 0 1.1rem 2.5rem -1rem rgb(8 16 60 / 0.55);
+  padding: 1.9rem clamp(1.25rem, 4vw, 2.5rem) 2rem;
 }
 .contacto h2 { font-size: 1.6rem; text-align: center; }
 .estado { margin: 0.75rem auto 1.5rem; text-align: center; font-weight: 700; min-height: 1.55em; }
@@ -84,11 +94,6 @@ svg.i { width: 1.35em; height: 1.35em; flex: none; }
 .boton:hover { transform: translateY(-2px); background: var(--rojo-hondo); }
 .boton.wa:hover { background: #0f5e2d; }
 .boton:active { transform: translateY(0); }
-
-/* Escalón entre portada y resto: la plaza empieza */
-.portada::after { content: ""; display: block; height: clamp(2.5rem, 6vw, 4rem); background: var(--cal); margin-inline: calc(var(--lado) * -1); margin-top: -1px; position: relative; z-index: -1; }
-.portada .contacto { margin-bottom: calc(clamp(2.5rem, 6vw, 4rem) * -1); position: relative; }
-.portada { margin-bottom: 0; }
 
 /* Horario */
 .horario .interior { display: grid; gap: 3rem; }
