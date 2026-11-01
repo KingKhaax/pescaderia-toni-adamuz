@@ -4,7 +4,7 @@ Web informativa (sin pedidos): contacto por llamada y WhatsApp, horarios, repart
 **Ver la web:** https://kingkhaax.github.io/pescaderia-toni-adamuz/
 
 - Abrir `index.html` en el navegador; no necesita instalación.
-- Productos: editar la sección `#pescados` de `index.html`. Fotos: añadirlas en `fotos/` y ponerlas con `<img>` dentro de cada `<li>`.
+- Diseño tipo portada de periódico: rojo principal, azul y blanco secundarios (colores de la tarjeta). No se listan productos concretos, solo pescado fresco, mariscos y congelados (sección `#vendemos`).
 - Teléfonos, horarios y ubicación están en `index.html` y `estado.js` (horario de llamadas).
 
 ## Cuando haya dominio propio

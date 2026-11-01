@@ -17,7 +17,7 @@ Vecinos y clientes habituales de la zona, muchos de edad, desde el móvil, a men
 - Llamadas: 661 512 393 y 661 512 392
 - Ubicación: Mercado Sánchez Peña, puestos 35 y 36, Plaza de la Corredera
 - Horario de llamadas: 08:00–12:00, martes a sábado
-- Reparto a domicilio: martes a viernes, 09:00–13:00; pedido mínimo 50 €
+- Reparto a domicilio: martes a viernes, 09:00–13:00 (todo el horario es por las mañanas); sin pedido mínimo en la web
 - Catálogo en tres grupos: pescados frescos; pescados congelados; precocinados y congelados
 - Sin precios, sin fotos por ahora (el usuario las enviará después), sin pedidos online
 
