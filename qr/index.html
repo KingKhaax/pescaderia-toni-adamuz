@@ -6,37 +6,62 @@
 <meta name="robots" content="noindex">
 <title>Cartel con QR · Pescadería Toñi Adamuz</title>
 <style>
-@font-face { font-family: "Alfa Slab One"; src: url("../fuentes/alfa-slab-one.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Abril Fatface"; src: url("../fuentes/abril-fatface.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("../fuentes/caslon-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("../fuentes/caslon-400-it.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Atkinson Hyperlegible"; src: url("../fuentes/atkinson-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Atkinson Hyperlegible"; src: url("../fuentes/atkinson-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-:root { --rojo: #d8262f; --tinta: #14205c; --cal: #f9fafc; }
+:root { --rojo: #d8262f; --tinta: #14205c; --azul: #1f5fb0; --papel: #f7f8fa; }
 * { box-sizing: border-box; }
-body { margin: 0; background: #e1e7f1; color: var(--tinta); font: 400 1.1rem/1.5 "Atkinson Hyperlegible", system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.barra { max-width: 40rem; margin: 0 auto; padding: 1rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-.barra button { font: 700 1.05rem "Atkinson Hyperlegible", system-ui, sans-serif; min-height: 3rem; padding: .6rem 1.4rem; border: 0; border-radius: .7rem; background: var(--tinta); color: var(--cal); cursor: pointer; }
-.hoja { width: 100%; max-width: 40rem; margin: 0 auto 2rem; background: var(--cal); display: grid; justify-items: center; text-align: center; }
-.cab { width: 100%; background: var(--rojo); color: var(--cal); padding: 2.2rem 1.5rem 2.6rem; }
-h1 { margin: 0; font: 400 clamp(2rem, 8vw, 3.4rem)/1.05 "Alfa Slab One", Georgia, serif; }
-.cab p { margin: .8rem 0 0; font-weight: 700; }
-.qr { width: min(78%, 22rem); height: auto; margin: 2rem 0 1rem; image-rendering: crisp-edges; }
-.pide { margin: 0; font: 400 1.7rem/1.15 "Alfa Slab One", Georgia, serif; padding-inline: 1.5rem; }
-.tel { margin: 1.1rem 0 0; font: 400 1.5rem/1.3 "Alfa Slab One", Georgia, serif; }
-.pie { margin: 1.4rem 0 2rem; padding-inline: 1.5rem; }
+body { margin: 0; background: #dfe4ee; color: var(--tinta); font: 400 1.1rem/1.5 "Atkinson Hyperlegible", system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.barra { max-width: 42rem; margin: 0 auto; padding: 1rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.barra button { font: 700 1.05rem "Atkinson Hyperlegible", system-ui, sans-serif; min-height: 3rem; padding: .6rem 1.4rem; border: 0; border-radius: .6rem; background: var(--rojo); color: #fff; cursor: pointer; }
+
+/* Hoja A4 (210 × 297 mm) */
+.hoja { width: 210mm; height: 297mm; margin: 0 auto 2rem; background: var(--papel); display: flex; flex-direction: column; overflow: hidden; }
+.tira { margin: 9mm 14mm 0; padding-bottom: 2mm; border-bottom: .6mm solid var(--tinta); display: flex; justify-content: space-between; font-weight: 700; font-size: 11pt; }
+.cab { margin: 0 14mm; text-align: center; padding: 5mm 0 5mm; border-bottom: 1.6mm double var(--tinta); }
+h1 { margin: 0; font: 400 46pt/.96 "Abril Fatface", Georgia, serif; color: var(--rojo); }
+.cab p { margin: 3mm 0 0; font-weight: 700; font-size: 12pt; letter-spacing: .1em; text-transform: uppercase; }
+.pide { margin: 6mm 14mm 0; text-align: center; font: 700 25pt/1.1 "Libre Caslon Text", Georgia, serif; }
+.pide em { display: block; margin-top: 2mm; font: italic 400 15pt/1.3 "Libre Caslon Text", Georgia, serif; color: #444d7a; }
+.marco { margin: 5mm auto 0; padding: 5mm; background: #fff; border: .9mm solid var(--tinta); }
+.marco img { display: block; width: 82mm; height: 82mm; }
+.tels { margin: 6mm 14mm 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; text-align: center; }
+.tels div { border: .6mm solid var(--tinta); padding: 4mm 2mm 4.5mm; background: #fff; }
+.tels b { display: block; font: 700 23pt/1.1 "Atkinson Hyperlegible", sans-serif; font-variant-numeric: tabular-nums; }
+.tels span { font-size: 14pt; color: #444d7a; }
+.tels div:first-child { border-color: var(--rojo); }
+.horario { margin: 4mm 14mm 0; text-align: center; font-size: 12pt; line-height: 1.4; }
+.horario b { color: var(--rojo); }
+.fin { margin-top: auto; position: relative; }
+.fin svg { display: block; width: 100%; height: 16mm; }
+.pie { background: var(--tinta); color: #fff; text-align: center; padding: 2mm 14mm 6mm; font-size: 11.5pt; line-height: 1.45; margin-top: -1px; }
+.pie b { font: 400 20pt/1.1 "Abril Fatface", Georgia, serif; display: block; margin-bottom: 1.5mm; }
 @page { size: A4; margin: 0; }
-@media print { body { background: var(--cal); } .barra { display: none; } .hoja { max-width: none; margin: 0; min-height: 100vh; align-content: start; } .qr { width: 15cm; } }
+@media print { body { background: var(--papel); } .barra { display: none; } .hoja { margin: 0; } }
+@media screen and (max-width: 800px) { .hoja { zoom: .42; } }
 </style>
 </head>
 <body>
-<div class="barra"><span>Cartel listo para imprimir en A4.</span><button type="button" onclick="window.print()">Imprimir</button></div>
+<div class="barra"><span>Cartel listo para imprimir en A4</span><button type="button" onclick="window.print()">Imprimir</button></div>
 <main class="hoja">
-  <div class="cab">
+  <div class="tira"><span>Mercado Sánchez Peña, puestos 35 y 36</span><span>Plaza de la Corredera, Córdoba</span></div>
+  <header class="cab">
     <h1>Pescadería Toñi Adamuz</h1>
-    <p>Mercado Sánchez Peña, puestos 35 y 36 · Plaza de la Corredera</p>
+    <p>Pescado fresco, mariscos y congelados</p>
+  </header>
+  <p class="pide">Escanead y pedid por teléfono o Whatsapp<em>Os lo llevamos a casa, o venid al puesto</em></p>
+  <div class="marco"><img src="qr.png" alt="Código QR que lleva a la web de la pescadería" width="400" height="400"></div>
+  <div class="tels">
+    <div><b>661 512 393</b><span>Toñi</span></div>
+    <div><b>661 512 392</b><span>Paco</span></div>
   </div>
-  <img class="qr" src="qr.svg" alt="Código QR que lleva a la web de la pescadería" width="400" height="400">
-  <p class="pide">Escanea y pide por teléfono o WhatsApp</p>
-  <p class="tel">661 512 393 Toñi<br>661 512 392 Paco</p>
-  <p class="pie">Reparto a domicilio de martes a viernes, por la mañana</p>
+  <p class="horario"><b>Llamadas</b> de martes a sábado, de 8:00 a 12:00 · <b>Reparto</b> de martes a viernes, de 9:00 a 13:00<br>Todo el horario es por las mañanas</p>
+  <div class="fin">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#cfe8fa" d="M0 52C160 6 320 10 520 48s380 36 560 -2 260 -34 360 -8V120H0z"/><path fill="#2f7fd9" d="M0 74C180 36 340 40 560 74s400 22 560 -8 240 -22 320 -8V120H0z"/><path fill="#1f5fb0" d="M0 94C200 66 380 72 600 96s400 8 560 -14 180 -10 280 4V120H0z"/></svg>
+    <div class="pie"><b>Pescadería Toñi Adamuz</b>Mercado Sánchez Peña, puestos 35 y 36 · Plaza de la Corredera</div>
+  </div>
 </main>
 </body>
 </html>
