@@ -149,9 +149,12 @@ svg.i { width: 1.4em; height: 1.4em; flex: none; }
 .dias th, .dias td { text-align: left; padding: 0.55rem 0.4rem; border-bottom: 1px solid var(--linea); white-space: nowrap; }
 .dias tbody th { font-weight: 700; }
 .dias td.no { color: var(--tinta-2); }
-.dias tr.hoy { background: var(--rojo-claro); }
-.dias tr.hoy th { color: var(--rojo-hondo); }
-.dias tr.hoy th::after { content: " · hoy"; font-weight: 400; font-size: 0.9rem; }
+/* Hoy: fila en rojo macizo, letra blanca más grande y etiqueta HOY, para verla de lejos */
+.dias tr.hoy th, .dias tr.hoy td { background: var(--rojo); color: var(--blanco); font-weight: 700; font-size: 1.2rem; padding-block: 0.85rem; border-bottom-color: var(--rojo); }
+.dias tr.hoy th { border-radius: 0.5rem 0 0 0.5rem; padding-left: 0.6rem; }
+.dias tr.hoy td:last-child { border-radius: 0 0.5rem 0.5rem 0; }
+.dias tr.hoy td.no { color: var(--blanco); }
+.dias tr.hoy th::after { content: "HOY"; display: inline-block; margin-left: 0.55rem; padding: 0.15rem 0.5rem; border-radius: 0.3rem; background: var(--blanco); color: var(--rojo-hondo); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; vertical-align: 0.12em; }
 
 /* Dónde */
 .donde { display: grid; grid-template-columns: 1fr 1.15fr; gap: 2.5rem 3.5rem; align-items: center; margin-top: 3.5rem; padding: 2.5rem 0 4rem; border-top: 6px double var(--tinta); }
