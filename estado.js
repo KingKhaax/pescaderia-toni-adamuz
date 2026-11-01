@@ -21,7 +21,11 @@ estado.dataset.abierto = abierto ? "si" : "no";
 
 // Fecha de hoy en la tira de la portada.
 const fecha = document.getElementById("fecha");
-if (fecha) fecha.textContent = new Intl.DateTimeFormat("es-ES", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Madrid" }).format(new Date());
+if (fecha) {
+  const may = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const p = Object.fromEntries(new Intl.DateTimeFormat("es-ES", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Madrid" }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  fecha.textContent = `${may(p.weekday)}, ${p.day} de ${may(p.month)} de ${p.year}`;
+}
 
 // Marca la fila de hoy en la semana (data-d usa getDay: domingo=0).
 const fila = document.querySelector(`#semana tr[data-d="${dia}"]`);
