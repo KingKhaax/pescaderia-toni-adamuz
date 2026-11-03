@@ -6,6 +6,7 @@ Web informativa (sin pedidos): contacto por llamada y WhatsApp, horarios, repart
 - Abrir `index.html` en el navegador; no necesita instalación.
 - Diseño tipo portada de periódico: rojo principal, azul y blanco secundarios (colores de la tarjeta). No se listan productos concretos, solo pescado fresco, mariscos y congelados (sección `#vendemos`).
 - Teléfonos, horarios y ubicación están en `index.html` y `estado.js` (horario de llamadas).
+- Dominio y Google: ver `GOOGLE-Y-DOMINIO.md` y el script `tools/cambiar-dominio.mjs`.
 
 ## Cuando haya dominio propio
 La dirección de la web aparece en estos sitios y hay que cambiarla a la vez:
