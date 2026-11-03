@@ -250,3 +250,29 @@ svg.i { width: 1.4em; height: 1.4em; flex: none; }
   .dias tr.hoy th, .dias tr.hoy td { font-size: 0.95rem; }
   .caja .cuerpo { padding-inline: 0.7rem; }
 }
+
+/* Carrusel de fotos del mercado */
+.mercado { padding: 2.5rem 0 4.5rem; border-top: 6px double var(--tinta); }
+.mercado-cab { display: flex; justify-content: space-between; align-items: center; gap: 1rem 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.mercado h2 { font: 700 clamp(2.1rem, 4.4vw, 3.2rem)/1.08 var(--titular); letter-spacing: -0.01em; }
+.control { display: flex; align-items: center; gap: 0.9rem; }
+.cuenta { font-weight: 700; font-size: 1.1rem; min-width: 4.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+.flecha { position: relative; isolation: isolate; overflow: hidden; width: 3.5rem; height: 3.5rem; display: grid; place-items: center; border: 2px solid var(--rojo); border-radius: 50%; background: var(--rojo); color: var(--blanco); cursor: pointer; transition: color 0.3s var(--ease), transform 0.25s var(--ease), opacity 0.25s var(--ease); }
+.flecha::before { content: ""; position: absolute; z-index: -1; left: -20%; width: 140%; height: 260%; top: 105%; background: var(--rojo-oscuro); border-radius: 46% 54% 0 0 / 16% 14% 0 0; transition: top 0.6s var(--ease), border-radius 0.6s var(--ease); }
+.flecha:hover::before, .flecha:focus-visible::before { top: -45%; border-radius: 50%; }
+.flecha:hover { transform: translateY(-2px); }
+.flecha:active { transform: scale(0.95); }
+.flecha:disabled { opacity: 0.35; cursor: default; transform: none; }
+.flecha:disabled::before { display: none; }
+.flecha svg.i { width: 1.6rem; height: 1.6rem; }
+.pista { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 0.25rem 0 0.75rem; scrollbar-width: none; overscroll-behavior-x: contain; }
+.pista::-webkit-scrollbar { display: none; }
+.diapo { flex: 0 0 72%; scroll-snap-align: start; }
+.diapo figure { border: 1px solid var(--tinta); background: var(--blanco); padding: 0.4rem 0.4rem 0.9rem; height: 100%; }
+.diapo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--azul-claro); }
+.diapo figcaption { margin: 0.75rem 0.4rem 0; font: 700 1.1rem/1.4 var(--texto); }
+.credito { display: block; margin-top: 0.3rem; font-weight: 400; font-size: 0.85rem; color: var(--tinta-2); }
+.credito a { color: var(--azul); }
+@media (max-width: 62rem) { .diapo { flex-basis: 86%; } }
+@media (max-width: 40rem) { .diapo { flex-basis: 90%; } .mercado { padding-bottom: 3rem; } .flecha { width: 3.25rem; height: 3.25rem; } }
+@media (prefers-reduced-motion: reduce) { .pista { scroll-behavior: auto; } }
