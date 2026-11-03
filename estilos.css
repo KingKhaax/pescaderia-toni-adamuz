@@ -267,6 +267,9 @@ svg.i { width: 1.4em; height: 1.4em; flex: none; }
 .flecha svg.i { width: 1.6rem; height: 1.6rem; }
 .pista { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 0.25rem 0 0.75rem; scrollbar-width: none; overscroll-behavior-x: contain; }
 .pista::-webkit-scrollbar { display: none; }
+.pista { touch-action: pan-x pan-y pinch-zoom; -webkit-overflow-scrolling: touch; cursor: grab; }
+.pista.arrastra { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
+.pista img { -webkit-user-drag: none; user-select: none; }
 .diapo { flex: 0 0 72%; scroll-snap-align: start; }
 .diapo figure { border: 1px solid var(--tinta); background: var(--blanco); padding: 0.4rem 0.4rem 0.9rem; height: 100%; }
 .diapo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--azul-claro); }
