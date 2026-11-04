@@ -17,6 +17,3 @@ La dirección de la web aparece en estos sitios y hay que cambiarla a la vez:
 
 ## Imágenes
 Los logos y la tarjeta están en WebP (`logos/`, `fotos/`). Para añadir otra: `ffmpeg -i origen.png -vf "scale=-1:300" -c:v libwebp -quality 86 destino.webp`.
-
-## Créditos de las fotos del mercado
-Las fotos de `fotos/mercado/` son de Chabe01, licencia CC BY-SA 4.0, vía Wikimedia Commons (Halles Marché Abastos Corredera, Córdoba, 28-04-2023). El crédito se muestra en cada foto del carrusel; si se cambian por fotos propias, quitar el crédito.

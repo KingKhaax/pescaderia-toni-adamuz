@@ -272,7 +272,7 @@ svg.i { width: 1.4em; height: 1.4em; flex: none; }
 .pista img { -webkit-user-drag: none; user-select: none; }
 .diapo { flex: 0 0 72%; scroll-snap-align: start; }
 .diapo figure { border: 1px solid var(--tinta); background: var(--blanco); padding: 0.4rem 0.4rem 0.9rem; height: 100%; }
-.diapo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--azul-claro); }
+.diapo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--azul-claro); }
 .diapo figcaption { margin: 0.75rem 0.4rem 0; font: 700 1.1rem/1.4 var(--texto); }
 .credito { display: block; margin-top: 0.3rem; font-weight: 400; font-size: 0.85rem; color: var(--tinta-2); }
 .credito a { color: var(--azul); }
