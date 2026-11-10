@@ -270,12 +270,11 @@ svg.i { width: 1.4em; height: 1.4em; flex: none; }
 .pista { touch-action: pan-x pan-y pinch-zoom; -webkit-overflow-scrolling: touch; cursor: grab; }
 .pista.arrastra { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
 .pista img { -webkit-user-drag: none; user-select: none; }
-.diapo { flex: 0 0 72%; scroll-snap-align: start; }
+.diapo { --alto: clamp(15rem, 38vw, 28rem); flex: 0 0 min(88vw, calc(var(--alto) * var(--ar) + 1.2rem)); scroll-snap-align: start; }
 .diapo figure { border: 1px solid var(--tinta); background: var(--blanco); padding: 0.4rem 0.4rem 0.9rem; height: 100%; }
-.diapo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--azul-claro); }
+.diapo img { width: 100%; height: var(--alto); object-fit: cover; background: var(--azul-claro); }
 .diapo figcaption { margin: 0.75rem 0.4rem 0; font: 700 1.1rem/1.4 var(--texto); }
 .credito { display: block; margin-top: 0.3rem; font-weight: 400; font-size: 0.85rem; color: var(--tinta-2); }
 .credito a { color: var(--azul); }
-@media (max-width: 62rem) { .diapo { flex-basis: 86%; } }
-@media (max-width: 40rem) { .diapo { flex-basis: 90%; } .mercado { padding-bottom: 3rem; } .flecha { width: 3.25rem; height: 3.25rem; } }
+@media (max-width: 40rem) { .diapo { --alto: clamp(14rem, 62vw, 20rem); } .mercado { padding-bottom: 3rem; } .flecha { width: 3.25rem; height: 3.25rem; } }
 @media (prefers-reduced-motion: reduce) { .pista { scroll-behavior: auto; } }
