@@ -38,3 +38,6 @@ const rotulo = document.querySelector(".cabecera");
 if (menu && rotulo && "IntersectionObserver" in window) {
   new IntersectionObserver(([e]) => menu.classList.toggle("fijo", !e.isIntersecting)).observe(rotulo);
 }
+
+const anos = document.getElementById("anos");
+if (anos) anos.textContent = ahora.getFullYear() - 1983;
